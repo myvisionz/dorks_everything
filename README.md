@@ -1,35 +1,27 @@
 
 
-# google dorks
+# Google Dorks
 
-## pages
+## Pages
 
 
 ### subdomain
 
 ```
-site:*.example.com
+site:*.example.com | site:*.*.example.com
 ```
-
-```
-site:*.*.example.com
-```
-
 
 ### Form pages
 
 ```
-site:example.com intitle:"Submit Feedback" | intitle:"Contact us" | intitle:"Join Our Waitlist" | intitle:"Subscribe" | intitle:"Newsletter" | intitle:"Unsubscribe" | intitle:"Email Support" | intitle:"Customer Support"
+intitle:"Submit Feedback" | intitle:"Contact us" | intitle:"Join Our Waitlist" | intitle:"Subscribe" | intitle:"Newsletter" | intitle:"Unsubscribe" | intitle:"Email Support" | intitle:"Customer Support" site:example.com
 ```
 
 ### Login Pages
 
 ```
-inurl:login | inurl:signin | intitle:login | intitle:"sign in" | inurl:secure | inurl:auth | inurl:/register | inurl:portal site:example[.]com
+inurl:login | inurl:signin | intitle:login | intitle:"sign in" | inurl:secure | inurl:auth | inurl:/register | inurl:portal site:example.com
 ```
-
-
-
 
 ### INDEX
 
@@ -37,108 +29,47 @@ inurl:login | inurl:signin | intitle:login | intitle:"sign in" | inurl:secure | 
 site:example.com intext:"index of" | "parent directory" | intitle:index.of
 ```
 
-```
-site:example.com intitle:"Index of" wp-admin
-```
 
-```
-site:example.com intext:"Index of /" +.htaccess
-```
-
-
-## files
+## Files
 
 ### robots & sitemap
 
 ```
-site:example.com ext:txt | ext:xml | inurl:robots | inurl:sitemap | intext:robots | intext:sitemap 
+ext:txt | ext:xml | inurl:robots | inurl:sitemap | intext:robots | intext:sitemap site:example.com
 ```
 
 ### Publicly Exposed Documents
 
 ```
-site:example.com ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:xls | ext:xlsx | ext:txt
+ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:xls | ext:xlsx | ext:txt site:example.com
 ```
 
 
 
-## footprint
+## Footprint
 
 ### EMAIL
 ```
 site:example.com (filetype:doc OR filetype:xlsx) intext:@gmail.com
 ```
 
-### Code Leaks
+### Code Leaks - - > 外链追踪
 
 ```
-site:pastebin.com | site:paste2.org | site:pastehtml.com | site:slexy.org | site:snipplr.com | site:snipt.net | site:textsnip.com | site:bitpaste.app | site:justpaste.it | site:heypasteit.com | site:hastebin.com | site:dpaste.org | site:dpaste.com | site:codepad.org | site:jsitor.com | site:codepen.io | site:jsfiddle.net | site:dotnetfiddle.net | site:phpfiddle.org | site:ide.geeksforgeeks.org | site:repl.it | site:ideone.com | site:paste.debian.net | site:paste.org | site:paste.org.ru | site:codebeautify.org  | site:codeshare.io | site:trello.com 'example.com'
+site:pastebin.com | site:paste2.org | site:pastehtml.com | site:slexy.org | site:snipplr.com | site:snipt.net | site:textsnip.com | site:bitpaste.app | site:justpaste.it | site:heypasteit.com | site:hastebin.com | site:dpaste.org | site:dpaste.com | site:codepad.org | site:jsitor.com | site:codepen.io | site:jsfiddle.net | site:dotnetfiddle.net | site:phpfiddle.org | site:ide.geeksforgeeks.org | site:repl.it | site:ideone.com | site:paste.debian.net | site:paste.org | site:paste.org.ru | site:codebeautify.org  | site:codeshare.io | site:trello.com "example.com"
 ```
 
-### Cloud Storage
+### Cloud Storage - - > 有时这些site需要拆开各自单独和关键词组合
 
 ```
-site:s3.amazonaws.com "example.com"
-```
-
-```
-site:blob.core.windows.net "example.com"
+"example.com" site:s3.amazonaws.com | site:blob.core.windows.net | site:googleapis.com | site:drive.google.com | site:dev.azure.com | site:onedrive.live.com | site:digitaloceanspaces.com | site:sharepoint.com | site:s3-external-1.amazonaws.com | site:s3.dualstack.us-east-1.amazonaws.com | site:dropbox.com/s | site:box.com/s
 ```
 
 ```
-site:googleapis.com "example.com"
+site:docs.google.com inurl:"/d/" "example.com"
 ```
 
-```
-site:drive.google.com "example.com"
-```
-
-```
-site:dev.azure.com "example[.]com"
-```
-
-```
-site:onedrive.live.com "example[.]com"
-```
-
-```
-site:digitaloceanspaces.com "example[.]com"
-```
-
-```
-site:sharepoint.com "example[.]com"
-```
-
-```
-site:s3-external-1.amazonaws.com "example[.]com"
-```
-
-```
-site:s3.dualstack.us-east-1.amazonaws.com "example[.]com"
-```
-
-```
-site:dropbox.com/s "example[.]com"
-```
-
-```
-site:box.com/s "example[.]com"
-```
-
-```
-site:docs.google.com inurl:"/d/" "example[.]com"
-```
-
-
-
-
-
-
-
-
-
-
-### git
+### git se
 
 ```
 site:example.com "index of /.git" | intext:"index of /.git" "parent directory"
@@ -262,7 +193,7 @@ site:example.com inurl:nginx filetype:log
 
 
 
-# github dorks
+## Github Dorks
 
 ### Search in Github Gist
 
@@ -1404,19 +1335,19 @@ site:example.com ext:php inurl:?
 ### API Endpoints
 
 ```
-site:example[.]com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
+site:example.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
 ```
 
 ### High % inurl keywords
 
 ```
-inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:example[.]com
+inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:example.com
 ```
 
 ### Server Errors
 
 ```
-inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:example[.]com
+inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:example.com
 ```
 
 ### XSS prone parameters
@@ -1479,13 +1410,13 @@ intext:“confidential” | intext:“Not for Public Release” | intext:”inte
 ### Sensitive Parameters
 
 ```
-inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:example[.]com
+inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:example.com
 ```
 
 ### Adobe Experience Manager (AEM)
 
 ```
-inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:example[.]com
+inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:example.com
 ```
 
 ### Disclosed XSS and Open Redirects
@@ -1506,13 +1437,13 @@ site:groups.google.com "example.com"
 ### JFrog Artifactory
 
 ```
-site:jfrog.io "example[.]com"
+site:jfrog.io "example.com"
 ```
 
 ### Firebase
 
 ```
-site:firebaseio.com "example[.]com"
+site:firebaseio.com "example.com"
 ```
 
 ## Dorks that work better w/o domain
