@@ -929,7 +929,7 @@ inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/
 ### IIS Windows Server
 
 ```
-intitle:'IIS Windows Server' 'example.com'
+intitle:'IIS Windows Server' "example.com"
 ```
 
 ### Apache Server Status Exposed
@@ -953,7 +953,7 @@ inurl:'/.git 'example.com -github
 ### Digital Ocean Spaces
 
 ```
-site:digitaloceanspaces.com 'example.com'
+site:digitaloceanspaces.com "example.com"
 ```
 
 ### Apache Struts RCE
@@ -965,7 +965,7 @@ site:example.com ext:action | ext:struts | ext:do
 ### Search in Bitbucket and Atlassian
 
 ```
-site:bitbucket.org | site:atlassian.net 'example.com'
+site:bitbucket.org | site:atlassian.net "example.com"
 ```
 
 ### MY CUSTOM DORK
