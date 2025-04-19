@@ -61,7 +61,7 @@ site:example.com filetype:txt | inurl:.php.txt | ext:txt
 ### Linkedin Employees
 
 ```
-site:linkedin.com employees
+site:linkedin.com employees "example.com"
 ```
 
 ### Form pages
@@ -103,31 +103,31 @@ site:example.com inurl:wp- | inurl:wp-content | inurl:wp-admin | inurl:wp-includ
 ### Wordpress Juicy file 1
 
 ```
-inurl:/wp-content/uploads/wpo_wcpdf
+inurl:/wp-content/uploads/wpo_wcpdf "example.com"
 ```
 
 ### Wordpress Juicy file 2
 
 ```
-inurl:wp-content/uploads/wcpa_uploads
+inurl:wp-content/uploads/wcpa_uploads "example.com"
 ```
 
 ### Wordpress Juicy file 3
 
 ```
-inurl:"wp-content" intitle:"index.of" intext:wp-config.php
+inurl:"wp-content" intitle:"index.of" intext:wp-config.php "example.com"
 ```
 
 ### Vulnerable Wordpress Plugin
 
 ```
-inurl:*/wp-content/plugins/contact-form-7/
+inurl:*/wp-content/plugins/contact-form-7/ "example.com"
 ```
 
 ### Wordpress Backup
 
 ```
-inurl:"wp-content" intitle:"index.of" intext:backup"
+inurl:"wp-content" intitle:"index.of" intext:backup" "example.com"
 ```
 
 ### WORDPRESS
@@ -146,31 +146,31 @@ site:example.com intitle:"Index of" wp-admin
 ### wp-content Juicy Info
 
 ```
-inurl:/wp-content/uploads/wpo_wcpdf
+inurl:/wp-content/uploads/wpo_wcpdf "example.com"
 ```
 
 ### WordPress admin panel
 
 ```
-inurl:/wp-admin/admin-ajax.php
+inurl:/wp-admin/admin-ajax.php "example.com"
 ```
 
 ### Drupal - - > Drupal是一个开源的内容管理系统（CMS）
 
 ```
-intext:"Powered by" & intext:Drupal & inurl:user
+intext:"Powered by" & intext:Drupal & inurl:user "example.com"
 ```
 
 ### Drupal Login
 
 ```
-inurl:user intitle:"Drupal" intext:"Log in" -"powered by"
+inurl:user intitle:"Drupal" intext:"Log in" -"powered by" "example.com"
 ```
 
 ### Joomla - - > Joomla是一个开源的内容管理系统（CMS）
 
 ```
-site:*/joomla/login
+site:*/joomla/login "example.com"
 ```
 
 ### JOOMLA
@@ -185,7 +185,7 @@ site:example.com site:*/joomla/administrator
 ### Joomla Database/
 
 ```
-inurl: /libraries/joomla/database/
+inurl: /libraries/joomla/database/ "example.com"
 ```
 
 ### Password files
@@ -221,31 +221,31 @@ intext:'index of' '.html' inurl:example.com
 ### Install / Setup files
 
 ```
-inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config
+inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config "example.com"
 ```
 
 ### main.yml file
 
 ```
-intitle:"index of "main.yml""
+intitle:"index of "main.yml"" "example.com"
 ```
 
 ### File Upload
 
 ```
-inurl:uploadimage.php
+inurl:uploadimage.php "example.com"
 ```
 
 ### jwks-rsa file
 
 ```
-intext:"index of" inurl:jwks-rsa
+intext:"index of" inurl:jwks-rsa "example.com"
 ```
 
 ### Docker-Compose yml file
 
 ```
-intitle:"index of" "docker-compose.yml"
+intitle:"index of" "docker-compose.yml" "example.com"
 ```
 
 ### PHP extension w/ parameters
@@ -269,13 +269,13 @@ site:example.com 'PHP Parse error' | 'PHP Warning' | 'PHP Error'
 ### Find SWF
 
 ```
-+inurl: +ext:swf
++inurl: +ext:swf "example.com"
 ```
 
 ### Find MIME-SWF
 
 ```
-site: mime:swf
+site: mime:swf "example.com"
 ```
 
 ### Firebase
@@ -345,13 +345,13 @@ site:example.com intext:"sql syntax near" | intext:"syntax error has occurred" |
 ### Mysql file
 
 ```
-intitle:index.of conf.mysql
+intitle:index.of conf.mysql "example.com"
 ```
 
 ### Sql File
 
 ```
-inurl:"php?sql=select" ext:php
+inurl:"php?sql=select" ext:php "example.com"
 ```
 
 ### Git Leaks
@@ -482,43 +482,43 @@ site:example.com intext:"Index of /" +.htaccess
 ```
 
 ```
-inurl:"/phpinfo.php" | inurl:".htaccess" | inurl:"/.git"  -github
+inurl:"/phpinfo.php" | inurl:".htaccess" | inurl:"/.git"  -github "example.com"
 ```
 
 ### Sensitive File
 
 ```
-intitle:index.of conf.php
+intitle:index.of conf.php "example.com"
 ```
 
 ### Sensitive Admin Backup
 
 ```
-intitle:"Index of" inurl:/backup/ "admin.zip"
+intitle:"Index of" inurl:/backup/ "admin.zip" "example.com"
 ```
 
 ### Sensitive File
 
 ```
-intitle:"index of" "download.php?file="
+intitle:"index of" "download.php?file=" "example.com"
 ```
 
 ### Sensitive File
 
 ```
-intitle:"index of" "users.yml" | "admin.yml" | "config.yml"
+intitle:"index of" "users.yml" | "admin.yml" | "config.yml" "example.com"
 ```
 
 ### Sensitive File
 
 ```
-intext:pom.xml intitle:"index of /"
+intext:pom.xml intitle:"index of /" "example.com"
 ```
 
 ### Sensitive File
 
 ```
-intext:"Index of" intext:"/etc"
+intext:"Index of" intext:"/etc" "example.com"
 ```
 
 ### SENSITIVE INFORMATION
@@ -677,7 +677,7 @@ site:example.com intext:"Index of" intext:"backend/"
 ### Finding Backdoors
 
 ```
-inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini
+inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini "example.com"
 ```
 
 ### ASPX/ASP/JSP/JSPX EXTENSION WITH PARAMETERS
@@ -840,43 +840,43 @@ site:example.com inurl:"/app/kibana#"
 ### Vulnerable Servers
 
 ```
-inurl:"/geoserver/ows?service=wfs"
+inurl:"/geoserver/ows?service=wfs" "example.com"
 ```
 
 ### ArcGIS REST Services Directory
 
 ```
-intext:"ArcGIS REST Services Directory" intitle:"Folder: /"
+intext:"ArcGIS REST Services Directory" intitle:"Folder: /" "example.com"
 ```
 
 ### Admin Portal
 
 ```
-inurl:/admin.aspx
+inurl:/admin.aspx "example.com"
 ```
 
 ### Sharing API Info
 
 ```
-intitle:"Sharing API Info"
+intitle:"Sharing API Info" "example.com"
 ```
 
 ### Github API
 
 ```
-intitle:"index of" github-api
+intitle:"index of" github-api "example.com"
 ```
 
 ### Remote procedure call protocol
 
 ```
-intext:"index of" inurl:json-rpc
+intext:"index of" inurl:json-rpc "example.com"
 ```
 
 ### Directories containing SQL Installs and/or SQL databases
 
 ```
-"sql" "parent" intitle:index.of -injection
+"sql" "parent" intitle:index.of -injection "example.com"
 ```
 ### API Endpoints
 
@@ -887,7 +887,7 @@ site:example.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
 ### Shodan Api
 
 ```
-inurl:pastebin 'SHODAN_API_KEY'
+inurl:pastebin 'SHODAN_API_KEY' "example.com"
 ```
 
 ### High % inurl keywords
@@ -935,7 +935,7 @@ intitle:'IIS Windows Server' 'example.com'
 ### Apache Server Status Exposed
 
 ```
-site:*/server-status apache
+site:*/server-status apache "example.com"
 ```
 
 ### Google Groups
@@ -1412,7 +1412,7 @@ https://www.shodan.io/search?query=example.com
 ### product:MySQL - - > 查询MySQL产品
 
 ```
-https://www.shodan.io/search?query=github.com+product%3AMySQL
+https://www.shodan.io/search?query=example.com+product%3AMySQL
 ```
 
 ### "MongoDB Server Information" -authentication - - > 查询MongoDB服务器信息，排除认证
