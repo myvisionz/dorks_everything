@@ -1,5 +1,5 @@
 
-## >Google Dorks
+## > Google Dorks
 
 ### subdomain
 
@@ -247,10 +247,6 @@ intext:"index of" inurl:jwks-rsa
 ```
 intitle:"index of" "docker-compose.yml"
 ```
-
-
-## php related
-
 
 ### PHP extension w/ parameters
 
@@ -982,7 +978,7 @@ site:example.com intext:"Index of" intext:"admin.tar.gz"
 ```
 
 
-## Github Dorks
+## > Github Dorks
 
 ### Search in GITHUB
 
@@ -1405,7 +1401,7 @@ https://github.com/search?q=%22example.com%22+path%3A*%2Fgitlab-recovery-codes.t
 ```
 
 
-## Shodan Dorks
+## > Shodan Dorks
 
 ### Search in Shodan
 
@@ -1648,7 +1644,7 @@ https://www.shodan.io/search?query=example.com%20%22Serial%20Number:%22%20%22Bui
 ```
 
 
-## others
+## > others
 
 ### Google CSE
 
@@ -1853,5 +1849,4 @@ https://wprecon.com/
 ```
 http://wwwb-dedup.us.archive.org:8083/cdx/search?url=example.com/&matchType=domain&collapse=digest&output=text&fl=original,timestamp&filter=urlkey:.*wp[-].*&limit=1000000&xx=
 ```
-
 
