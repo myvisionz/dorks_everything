@@ -158,13 +158,13 @@ inurl:/wp-admin/admin-ajax.php "example.com"
 ### Drupal - - > Drupal是一个开源的内容管理系统（CMS）
 
 ```
-intext:"Powered by" & intext:Drupal & inurl:user "example.com"
+"example.com" intext:"Powered by" & intext:Drupal & inurl:user
 ```
 
 ### Drupal Login
 
 ```
-inurl:user intitle:"Drupal" intext:"Log in" -"powered by" "example.com"
+"example.com" inurl:user intitle:"Drupal" intext:"Log in" -"powered by"
 ```
 
 ### Joomla - - > Joomla是一个开源的内容管理系统（CMS）
